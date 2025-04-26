@@ -1,0 +1,79 @@
+/* global.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 font-sans;
+}
+
+h1, h2, h3 {
+  @apply font-semibold text-gray-800 dark:text-gray-100;
+}
+
+header {
+  @apply bg-indigo-600 text-white py-4 px-8 shadow-md sticky top-0 z-10;
+}
+
+.card {
+  @apply bg-white shadow-lg rounded-lg p-6 space-y-4;
+}
+
+/* Button Styling */
+button {
+  @apply inline-flex justify-center items-center px-6 py-3 rounded-lg font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-200;
+}
+
+button[disabled] {
+  @apply bg-gray-300 cursor-not-allowed;
+}
+
+button:active {
+  @apply transform scale-95;
+}
+
+/* Error Message Styling */
+.error-alert {
+  @apply bg-red-100 text-red-700 border border-red-300 rounded-lg p-4 mt-4;
+}
+
+/* Success Message Styling */
+.success-alert {
+  @apply bg-green-100 text-green-700 border border-green-300 rounded-lg p-4 mt-4;
+}
+
+/* Loader Style */
+.loader {
+  @apply border-t-4 border-indigo-600 rounded-full h-12 w-12 animate-spin mx-auto my-6;
+}
+
+/* Form Styling */
+input, select, textarea {
+  @apply w-full px-4 py-3 border rounded-lg bg-gray-50 dark:bg-gray-700 text-gray-800 dark:text-gray-200 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 transition duration-200;
+}
+
+/* Table Styling */
+.table {
+  @apply min-w-full bg-white rounded-lg shadow-md;
+}
+
+.table th, .table td {
+  @apply px-6 py-3 text-left text-sm font-medium text-gray-600;
+}
+
+.table th {
+  @apply bg-indigo-600 text-white;
+}
+
+.table tr:hover {
+  @apply bg-indigo-100 dark:bg-indigo-800;
+}
+
+.table tr:nth-child(even) {
+  @apply bg-gray-50 dark:bg-gray-800;
+}
+
+/* Card Hover Effect */
+.card:hover {
+  @apply shadow-2xl transform scale-105 transition duration-300;
+}
